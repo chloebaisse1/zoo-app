@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+    />
+    <title>Animaux</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Gestion des Animaux</h2>
+      <a href="/dashboard" class="btn back-btn"><i class='bx bx-arrow-back'></i> Retour au Dashboard</a>
+    </div>
+      <form id="animalForm">
+        <div class="form-group">
+          <label for="animalNom">Nom de l'animal :</label>
+          <input
+            type="text"
+            id="animalNom"
+            placeholder="Entrez le nom du l'animal"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="animalRace">Race de l'animal :</label>
+          <input
+            type="text"
+            id="animalRace"
+            placeholder="Entrez la race de l'animal"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="animalHabitat">Habitat de l'animal :</label>
+          <input
+            type="text"
+            id="animalHabitat"
+            placeholder="Entrez l'habitat de l'animal"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="animalEtat">Etat de l'animal :</label>
+          <input
+            type="text"
+            id="animalEtat"
+            placeholder="Entrez l'etat de l'animal"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn create-btn">
+          Créer l'Animal <i class="bx bx-plus-circle"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="animal-list">
+      <h3 class="animal">Liste des Animaux</h3>
+      <table id="animauxTable">
+        <thead>
+          <tr>
+            <th>Nom de l'Animal</th>
+            <th>Race</th>
+            <th>Habitat</th>
+            <th>Etat</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nom du l'animal 1</td>
+            <td>Race du l'animal 1.</td>
+            <td>Habitat du l'animal 1.</td>
+            <td>Etat du l'animal 1.</td>
+            <td>
+              <button class="btn edit-btn">
+                <i class="bx bx-edit"></i> Modifier
+              </button>
+              <button class="btn delete-btn">
+                <i class="bx bx-trash"></i> Supprimer
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Nom du l'animal 2</td>
+            <td>Race du l'animal 2.</td>
+            <td>Habitat du l'animal 2.</td>
+            <td>Etat du l'animal 2.</td>
+            <td>
+              <button class="btn edit-btn">
+                <i class="bx bx-edit"></i> Modifier
+              </button>
+              <button class="btn delete-btn">
+                <i class="bx bx-trash"></i> Supprimer
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script type="module" src="/js/admin/animaux.js"></script>
+  </body>
+</html>

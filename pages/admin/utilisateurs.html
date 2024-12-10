@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+    />
+    <title>Utilisateurs</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Gestion des Utilisateurs</h2>
+      <a href="/dashboard" class="btn back-btn">
+        <i class="bx bx-arrow-back"></i> Retour au Dashboard
+      </a>
+    </div>
+    <form id="userForm">
+      <div class="form-group">
+        <label for="userFirstName">Nom :</label>
+        <input
+          type="text"
+          id="userFirstName"
+          placeholder="Entrez le nom de l'utilisateur"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="userLastName">Prénom :</label>
+        <input
+          type="text"
+          id="userLastName"
+          placeholder="Entrez le prénom de l'utilisateur"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="userEmail">Email :</label>
+        <input
+          type="email"
+          id="userEmail"
+          placeholder="Entrez l'email de l'utilisateur"
+          required
+        />
+      </div>
+      <button type="submit" class="btn create-btn">
+        Créer l'utilisateur <i class="bx bx-plus-circle"></i>
+      </button>
+    </form>
+
+    <div class="user-list">
+      <h3 class="user">Liste des Utilisateurs</h3>
+      <table id="userTable">
+        <thead>
+          <tr>
+            <th>Prénom de l'utilisateur</th>
+            <th>Nom de l'utilisateur</th>
+            <th>Email de l'utilisateur</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Les utilisateurs seront insérés ici -->
+        </tbody>
+      </table>
+    </div>
+    <script type="module" src="/js/admin/utilisateurs.js"></script>
+  </body>
+</html>

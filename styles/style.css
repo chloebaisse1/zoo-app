@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/**************************************/
+/* Global */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --accent: #b4c978;
+  --accent1: #9eb16a;
+  --accent2: #c0896c;
+  --bg: #fff;
+  --text: #333;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+section {
+  padding: 50px 10%;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 15px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 1rem;
+  border-radius: 7px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: var(--accent1);
+}
+.section-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-size: clamp(25px, 5vw, 40px);
+  color: var(--text);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section-heading span {
+  color: var(--accent2);
+}
+
+.btn-danger {
+  color: white;
+  background: red;
+}
+/**************************************/
+/* Navigation */
+
+.navbar-nav a {
+  color: var(--accent);
+}
+
+.navbar-brand {
+  color: var(--accent2);
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+main {
+  margin-bottom: 270px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+/**************************************/
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--accent2);
+  color: var(--bg);
+  font-size: 13px;
+  text-align: center;
+}
+
+/**************************************/
+/* Hero scene */
+
+.hero-scene {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    margin-bottom: 15px;
+  }
+  * {
+    position: relative;
+  }
+  .hero-scene-content {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -15px;
+  }
+}
+
+/**************************************/
+/* Home */
+
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: no-repeat right/cover url("./images/bg.jpg");
+}
+
+.home h1 {
+  font-size: clamp(28px, 5vw, 60px);
+}
+
+.home h1 span {
+  color: var(--accent);
+}
+
+.home p {
+  margin: 1rem 0 2rem 0;
+}
+
+img {
+  align-items: right;
+  border-radius: 10px;
+}
+
+/**************************************/
+/* les habitats */
+
+.habitats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.habitats-box {
+  position: relative;
+  height: 420px;
+  flex: 1 1 17rem;
+  overflow: hidden;
+}
+
+.habitats-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.habitats-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  padding-top: 8rem;
+  background: #ebe2e2;
+  transition: 0.4s ease-in-out;
+}
+
+.habitats-content h4 {
+  font-size: clamp(18px, 4vw, 25px);
+}
+.habitats-content p {
+  margin-bottom: 2rem;
+}
+.habitats-box:hover .habitats-content {
+  top: 0;
+}
+.habitats h1 span {
+  color: var(--accent2);
+}
+.habitats {
+  background: #ebd1d1;
+}
+
+/**************************************/
+/* les Services */
+
+services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.services-box {
+  position: relative;
+  height: 420px;
+  flex: 1 1 17rem;
+  overflow: hidden;
+}
+
+.services-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.services-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  padding-top: 8rem;
+  background: transparent;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+
+.services-content h4 {
+  font-size: clamp(18px, 4vw, 25px);
+}
+.services-content p {
+  margin-bottom: 2rem;
+}
+.services-box:hover .services-content {
+  top: 0;
+}
+.services h1 span {
+  color: var(--accent1);
+}
+
+/**************************************/
+/* slider Avis */
+
+.avis {
+  background-color: #ebe2e2;
+}
+.slider-1 {
+  max-width: 600px;
+  margin: 100px auto;
+  overflow: hidden;
+  border: 2px solid #9eb16a;
+  border-radius: 10px;
+}
+.slider-1 .slider {
+  display: flex;
+  animation: slider-1 25s infinite ease-in-out;
+}
+.slider-1 p {
+  flex-shrink: 0;
+  padding: 72px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: #c0896c;
+}
+
+/*
+5% par transition, nombre choisi arbitrairement
+
+reste divisé par nb de pauses
+80(%) / 4 = 20(%) par pause
+*/
+
+@keyframes slider-1 {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  25%,
+  45% {
+    transform: translateX(-100%);
+  }
+  50%,
+  70% {
+    transform: translateX(-200%);
+  }
+  75%,
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+/**************************************/
+/* la savane */
+
+.savane-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.savane-box {
+  position: relative;
+  height: 420px;
+  flex: 1 1 17rem;
+  overflow: hidden;
+}
+
+.savane-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.savane-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  padding-top: 8rem;
+  background: transparent;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+
+.savane-content h4 {
+  font-size: clamp(18px, 4vw, 25px);
+}
+.savane-content p {
+  margin-bottom: 2rem;
+}
+.savane-box:hover .savane-content {
+  top: 0;
+}
+
+/**************************************/
+/* la jungle */
+
+.jungle-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.jungle-box {
+  position: relative;
+  height: 420px;
+  flex: 1 1 17rem;
+  overflow: hidden;
+}
+
+.jungle-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.jungle-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  padding-top: 8rem;
+  background: transparent;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+
+.jungle-content h4 {
+  font-size: clamp(18px, 4vw, 25px);
+}
+.jungle-content p {
+  margin-bottom: 2rem;
+}
+.jungle-box:hover .jungle-content {
+  top: 0;
+}
+
+/**************************************/
+/* les marais */
+
+.marais-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.marais-box {
+  position: relative;
+  height: 420px;
+  flex: 1 1 17rem;
+  overflow: hidden;
+}
+
+.marais-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.marais-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  padding-top: 8rem;
+  background: transparent;
+  transition: 0.2s ease-in-out;
+  color: whitesmoke;
+}
+
+.marais-content h4 {
+  font-size: clamp(18px, 4vw, 25px);
+}
+.marais-content p {
+  margin-bottom: 2rem;
+}
+.marais-box:hover .marais-content {
+  top: 0;
+}
+
+/**************************************/
+/* formulaires */
+
+.form-label {
+  color: #9eb16a;
+}
+
+.signup,
+.account,
+.signin,
+.account {
+  color: #c0896c;
+}
+
+/***************************/
+/*******Like Button*********/
+
+.savane-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.savane-box {
+  position: relative; /* Pour positionner les éléments enfants */
+  margin: 15px;
+}
+
+.like-container {
+  position: absolute; /* Positionner par rapport à .savane-box */
+  bottom: 10px; /* Ajuster la distance du bas de l'image */
+  right: 10px; /* Ajuster la distance du bord droit */
+  display: flex;
+  align-items: center; /* Centrer verticalement les éléments */
+  background: rgba(255, 255, 255, 0.8); /* Fond blanc transparent */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 5px; /* Espacement interne */
+}
+
+.heart-icon {
+  margin-right: 5px; /* Espacement entre le cœur et le compteur */
+}

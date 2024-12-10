@@ -1,0 +1,102 @@
+<div class="hero-scene text-center text-white"></div>
+  <div class="hero-scene-content">
+    <h1>Espace Employé</h1>
+  </div>
+</div>
+
+<div class="container pt-3">
+  <form id="formulairePassage">
+    <div class="mb-3">
+      <label for="NomInput" class="form-label">Nom</label>
+      <input
+        type="text"
+        class="form-control"
+        id="NomInput"
+        placeholder="nom de l'animal"
+        name="nom"
+      />
+      <div class="invalid-feedback">Le nom est requis</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="RaceInput" class="form-label">Race</label>
+      <input
+        type="text"
+        class="form-control"
+        id="RaceInput"
+        placeholder="race de l'animal"
+        name="race"
+      />
+      <div class="invalid-feedback">La race est requise</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="HabitatInput" class="form-label">Habitat</label>
+      <input
+        type="text"
+        class="form-control"
+        id="HabitatInput"
+        placeholder="habitat de l'animal"
+        name="habitat"
+      />
+      <div class="invalid-feedback">L'habitat est requis</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="NourritureInput" class="form-label">Nourriture</label>
+      <input
+        type="text"
+        class="form-control"
+        id="NourritureInput"
+        placeholder="Nourriture de l'animal"
+        name="nourriture"
+      />
+      <div class="invalid-feedback">La nourriture est requise</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="QuantiteeInput" class="form-label">Quantitee</label>
+      <input
+        type="text"
+        class="form-control"
+        id="QuantiteeInput"
+        placeholder="Quantitee de nourriture pour l'animal"
+        name="quantitee"
+      />
+      <div class="invalid-feedback">La quantitee est requise</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="DateInput" class="form-label">Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="DateInput"
+        placeholder="Date de passage de l'animal"
+        name="date"
+      />
+      <div class="invalid-feedback">La date est requise</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="HeureInput" class="form-label">Heure</label>
+      <input
+        type="time"
+        class="form-control"
+        id="HeureInput"
+        placeholder="Heure de passage de l'animal"
+        name="time"
+      />
+      <div class="invalid-feedback">L'heure est requise</div>
+    </div>
+
+    <div class="text-center pt-3">
+      <button type="button" class="btn" id="btn-validation-passage">
+        Envoyer
+      </button>
+    </div>
+
+    <!-- Div pour afficher les messages d'erreur ou de succès -->
+    <div id="message" class="mt-3"></div>
+  </form>
+</div>

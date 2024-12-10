@@ -1,0 +1,49 @@
+<div class="hero-scene text-center text-white">
+  <div class="hero-scene-content">
+    <h1>Laisser un avis</h1>
+  </div>
+</div>
+
+<div class="container pt-3">
+  <form id="formulaireAvis">
+    <div class="mb-3">
+      <label for="NomInput" class="form-label">Nom</label>
+      <input
+        type="text"
+        class="form-control"
+        id="NomInput"
+        placeholder="votre nom"
+        name="nom"
+      />
+      <div class="invalid-feedback">Le nom est requis</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="PrenomInput" class="form-label">Prénom</label>
+      <input
+        type="text"
+        class="form-control"
+        id="PrenomInput"
+        placeholder="votre prénom"
+        name="prenom"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="MessageInput" class="form-label">Message :</label>
+      <textarea
+        class="form-control"
+        id="MessageInput"
+        name="message"
+        rows="5"
+        placeholder="Votre avis"
+      ></textarea>
+    </div>
+
+    <div class="text-center pt-3">
+      <button type="button" class="btn" id="btn-validation-avis">
+        Envoyer
+      </button>
+    </div>
+  </form>
+</div>

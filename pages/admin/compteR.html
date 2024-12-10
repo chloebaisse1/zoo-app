@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion des Comptes Rendus Vétérinaires</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <h1>Gestion des Comptes Rendus Vétérinaire</h1>
+
+    <div class="back-button">
+      <a href="/dashboard" class="button">Retour au Dashboard</a>
+    </div>
+
+    <!-- Formulaire de filtre -->
+    <div class="filter-section">
+      <form id="filter-form">
+        <label for="animal-name">Filtrer par nom de l'animal:</label>
+        <input
+          type="text"
+          id="animal-name"
+          name="animal-name"
+          placeholder="Entrez le nom de l'animal"
+        />
+
+        <label for="date">Filtrer par date:</label>
+        <input type="date" id="date" name="date" />
+
+        <button type="submit">Filtrer</button>
+      </form>
+    </div>
+
+    <!-- Tableau des comptes rendus -->
+    <div class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Race</th>
+            <th>Habitat</th>
+            <th>Date</th>
+            <th>Nourriture</th>
+            <th>Quantité</th>
+            <th>Commentaire</th>
+          </tr>
+        </thead>
+        <tbody id="compte-rendu-table">
+          <!-- Les comptes rendus seront insérés ici -->
+        </tbody>
+      </table>
+    </div>
+    <!-- Ensuite le script des comptes rendus -->
+    <script type="module" src="/js/admin/compteRendu.js"></script>
+  </body>
+</html>

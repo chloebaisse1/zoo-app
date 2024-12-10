@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="images/1.svg" alt="logo" class="logo" />
+          <a class="navbar-brand pt-2" href="/">Arcadia Zoo</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Accueil</a>
+              </li>
+              <li class="nav-item" data-show "disconnected">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/account" data-show="connected">Mon compte</a>
+              </li>
+              <li class="nav-item" data-show="disconnected">
+                <a class="nav-link" href="/signin">Connexion</a>
+              </li>
+
+              <li class="nav-item" data-show="connected">
+                <button class="nav-link" id="signout-btn">Déconnexion</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-page">
+      <!--Le contenu de la page sera injectée ici-->
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Zoo Arcadia. Tous droits réservés.</p>
+      <div class="adresse">
+        <span> <i class="bx bx-map"></i> Adresse</span>
+        <p>51 rue du parc, 35800 Paimpont</p>
+        <div class="horaires">
+          <span> <i class="bx bx-time"></i> Horaires</span>
+          <p>Lundi - Dimache : 9h - 18h</p>
+          <div class="contact">
+            <span> <i class="bx bxs-phone"></i> Contact</span>
+            <p>
+              <a href="tel:+33612345678">+33 6 12 34 56 78</a>
+            </p>
+            <p><i class="bx bx-envelope"></i> Email : arcadiaazoo@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script type="module" src="Router/router.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

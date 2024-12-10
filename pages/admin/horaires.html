@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+    />
+    <title>Horaires</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Gestion des Horaires</h2>
+      <a href="/dashboard" class="btn back-btn"
+        ><i class="bx bx-arrow-back"></i> Retour au Dashboard</a
+      >
+    </div>
+    <form id="horaireForm">
+      <div class="form-group">
+        <label for="horaireJour">Jour :</label>
+        <input
+          type="text"
+          id="horaireJour"
+          name="horaireJour"
+          placeholder="Entrez le jour"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="horaireOuverture">Ouverture :</label>
+        <input
+          type="time"
+          id="horaireOuverture"
+          name="horaireOuverture"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="horaireFermeture">Fermeture :</label>
+        <input
+          type="time"
+          id="horaireFermeture"
+          name="horaireFermeture"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn create-btn">
+        Créer l'Horaire <i class="bx bx-plus-circle"></i>
+      </button>
+    </form>
+
+    <div class="horaire-list">
+      <h3 class="horaire">Liste des Horaires</h3>
+      <table id="horairesTable">
+        <thead>
+          <tr>
+            <th>Jour</th>
+            <th>Ouverture</th>
+            <th>Fermeture</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="horairesTbody">
+          <!-- Les horaires seront insérés ici par JavaScript -->
+        </tbody>
+      </table>
+    </div>
+    <script type="module" src="/js/admin/horaires.js"></script>
+  </body>
+</html>

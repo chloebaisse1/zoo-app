@@ -1,0 +1,50 @@
+<div class="hero-scene text-center text-white">
+  <div class="hero-scene-content">
+    <h1>Nous contacter</h1>
+  </div>
+</div>
+
+<div class="container pt-3">
+  <form id="formulaireContact">
+    <div class="mb-3">
+      <label for="NameInput" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="NameInput"
+        placeholder="votre nom"
+        name="name"
+      />
+      <div class="invalid-feedback">Le nom est requis</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="EmailInput" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="EmailInput"
+        placeholder="test@mail.com"
+        name="email"
+      />
+      <div class="invalid-feedback">Le mail n'est pas au format</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="DemandeInput" class="form-label">Demande :</label>
+      <textarea
+        class="form-control"
+        id="DemandeInput"
+        name="demande"
+        rows="5"
+        placeholder="Votre demande"
+      ></textarea>
+    </div>
+
+    <div class="text-center pt-3">
+      <button type="submit" class="btn" id="btn-validation-demande">
+        Envoyer
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+    />
+    <title>Habitats</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Gestion des Habitats</h2>
+      <a href="/dashboard" class="btn back-btn">
+        <i class="bx bx-arrow-back"></i> Retour au Dashboard
+      </a>
+    </div>
+
+    <form id="habitatForm">
+      <div class="form-group">
+        <label for="habitatName">Nom de l'Habitat :</label>
+        <input
+          type="text"
+          id="habitatName"
+          placeholder="Entrez le nom de l'habitat"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="habitatDescription">Description :</label>
+        <textarea
+          id="habitatDescription"
+          placeholder="Entrez la description"
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="habitatAnimals">Animaux :</label>
+        <input
+          type="text"
+          id="habitatAnimals"
+          placeholder="Entrez les animaux de l'habitat"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn create-btn">
+        Créer l'Habitat <i class="bx bx-plus-circle"></i>
+      </button>
+    </form>
+
+    <div class="habitat-list">
+      <h3 class="habitat">Liste des Habitats</h3>
+      <table id="habitatsTable">
+        <thead>
+          <tr>
+            <th>Nom de l'Habitat</th>
+            <th>Description</th>
+            <th>Animaux</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Les habitats seront injectés ici par JavaScript -->
+        </tbody>
+      </table>
+    </div>
+    <script type="module" src="/js/admin/habitats.js"></script>
+  </body>
+</html>
