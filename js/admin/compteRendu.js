@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Construire l'URL complète avec les paramètres de recherche
-    const url = queryParams ? `${apiUrl}/search/${queryParams}` : apiUrl
+    const url = queryParams ? `${apiUrl}/search${queryParams}` : apiUrl
 
     fetch(url, {
       method: "GET",
@@ -87,11 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const animalName = document.getElementById("animal-name").value.trim() // Récupérer le nom de l'animal
     const date = document.getElementById("date").value // Récupérer la date
 
-    let queryParams = animalName // Initialiser les paramètres de requête avec le nom de l'animal
+    let queryParams = `/${animalName}` // Initialiser les paramètres de requête avec le nom de l'animal
 
     // Ajouter la date comme paramètre de recherche si elle est spécifiée
     if (date) {
-      queryParams += `?date=${date}`
+      queryParams += `?date=${date}` // Ajouter la date après le nom de l'animal
     }
 
     // Recharger les comptes rendus filtrés
